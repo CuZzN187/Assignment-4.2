@@ -1,1 +1,10 @@
-This is a git repo
+fInsertToDatabase takes 3 args. $asin, $title, and $price but this was initially set up for dvdtitles tables. There is an if-
+statement that determines if the $asin args has been passed in or if it's a false boolean. False boolean defaults to the dvdActors
+table for inserts.
+
+fDeleteFromDatabase takes 2 args $table and $asin. There is an if statement that detemines which table it is going to delete from.
+Then, there delete statement is carried out by finding which record has the matching $asin. If the table does not have an $asin,
+then it looks it up by lname (for dvdActors table).
+
+fListFromDatabase takes only one arg. $table. There is an if statement that detemines which table to show. Dvdtitles grabs the $asin
+and uses it to produce a picture of the dvd. DvdActors grabs the actorID, first and last name of the actor.
